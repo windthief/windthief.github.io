@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的主页 - 荔枝校园</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">♥</div>
+                    <div class="logo-text">荔枝校园</div>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="#">动态</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">消息</a></li>
+                        <li><a href="#">设置</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="搜索用户、话题..." class="search-input">
+                    </div>
+                    <button class="btn btn-outline" id="notification-btn">🔔</button>
+                    <div class="user-menu">
+                        <div class="user-avatar">张</div>
+                        <span class="username">张同学</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-avatar">张</div>
+                <div class="profile-info">
+                    <div class="profile-name">张同学</div>
+                    <div class="profile-id">学号: 2020123456</div>
+                    <div class="profile-bio">计算机科学与技术专业 | 大三学生 | 喜欢编程和摄影</div>
+                    <div>
+                        <span class="profile-college">学院：计算机学院</span>
+                        <span class="profile-gender" style="margin-left:18px;">性别：保密</span>
+                    </div>
+                    <div class="profile-tags">
+                        <span class="tag">#编程爱好者</span>
+                        <span class="tag">#摄影</span>
+                        <span class="tag">#音乐</span>
+                        <span class="tag">#篮球</span>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">128</div>
+                            <div class="stat-label">动态</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">346</div>
+                            <div class="stat-label">关注</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">521</div>
+                            <div class="stat-label">粉丝</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2.1K</div>
+                            <div class="stat-label">获赞</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <a href="#" class="btn btn-outline" id="edit-profile-btn">编辑资料</a>
+                    <a href="post.html" class="btn btn-primary">发布动态</a>
+                </div>
+            </div>
+
+            <div class="profile-tabs">
+                <div class="profile-tab active">我的动态</div>
+                <div class="profile-tab">相册</div>
+                <div class="profile-tab">收藏</div>
+                <div class="profile-tab">关注</div>
+                <div class="profile-tab">粉丝</div>
+            </div>
+
+            <div class="feed-container">
+                <div class="feed-left">
+                    <div class="tab-content" id="tab-dynamic">
+                        <div style="color:#888;text-align:center;padding:40px 0;">这里是我的动态内容</div>
+                    </div>
+                    <div class="tab-content" id="tab-album" style="display:none;">
+                        <div style="color:#888;text-align:center;padding:40px 0;">这里是相册内容</div>
+                    </div>
+                    <div class="tab-content" id="tab-fav" style="display:none;">
+                        <div style="color:#888;text-align:center;padding:40px 0;">这里是收藏内容</div>
+                    </div>
+                    <div class="tab-content" id="tab-following" style="display:none;">
+                        <div style="color:#888;text-align:center;padding:40px 0;">这里是关注内容</div>
+                    </div>
+                    <div class="tab-content" id="tab-fans" style="display:none;">
+                        <div style="color:#888;text-align:center;padding:40px 0;">这里是粉丝内容</div>
+                    </div>
+                </div>
+
+                <div class="feed-right">
+                    <div class="sidebar-card">
+                        <div class="sidebar-title">📅 活动日历</div>
+                        <div class="calendar">
+                            <ul class="calendar-list">
+                                <li><span class="calendar-date">6月10日</span> 校园歌手大赛决赛</li>
+                                <li><span class="calendar-date">6月12日</span> 计算机学院讲座</li>
+                                <li><span class="calendar-date">6月15日</span> 篮球友谊赛</li>
+                                <li><span class="calendar-date">6月20日</span> 毕业典礼</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <div class="sidebar-title">🏆 我的成就</div>
+                        <div class="achievements">
+                            <div class="achievement">
+                                <div class="achievement-icon">🏅</div>
+                                <div class="achievement-info">
+                                    <div class="achievement-title">活跃之星</div>
+                                    <div class="achievement-description">连续7天发布动态</div>
+                                </div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-icon">⭐</div>
+                                <div class="achievement-info">
+                                    <div class="achievement-title">社交达人</div>
+                                    <div class="achievement-description">关注数超过300</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- 页脚内容同首页 -->
+    </footer>
+
+    <div id="edit-profile-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn" id="close-edit-modal">&times;</span>
+            <h2 style="text-align:center;margin-bottom:18px;">编辑个人资料</h2>
+            <form id="edit-profile-form">
+                <div class="edit-profile-avatar-block">
+                    <div id="edit-avatar-preview"></div>
+                    <input type="file" id="edit-avatar-upload" accept="image/*" style="display:none;">
+                    <button type="button" id="choose-avatar-btn" class="btn btn-outline">上传头像</button>
+                </div>
+                <div class="edit-profile-fields">
+                    <div class="form-group">
+                        <label for="edit-nickname">昵称</label>
+                        <input type="text" id="edit-nickname" name="nickname" maxlength="12" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-gender">性别</label>
+                        <select id="edit-gender" name="gender">
+                            <option value="">保密</option>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-college">学院</label>
+                        <input type="text" id="edit-college" name="college" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-tags">标签（用逗号分隔）</label>
+                        <input type="text" id="edit-tags" name="tags" maxlength="30">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-bio">个人简介</label>
+                        <textarea id="edit-bio" name="bio" maxlength="100" rows="3"></textarea>
+                    </div>
+                </div>
+                <div style="text-align:center;margin-top:18px;">
+                    <button type="submit" class="btn btn-primary" style="width:60%;max-width:220px;">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="modal-mask" class="modal-mask" style="display:none;"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

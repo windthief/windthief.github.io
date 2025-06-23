@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李同学的主页 - 荔枝校园</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">♥</div>
+                    <div class="logo-text">荔枝校园</div>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="#">热点</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">小组</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="搜索用户、话题..." class="search-input">
+                    </div>
+                    <button class="btn btn-outline" id="notification-btn">🔔</button>
+                    <div class="user-menu">
+                        <div class="user-avatar">张</div>
+                        <span class="username">张同学</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-avatar">李</div>
+                <div class="profile-info">
+                    <div class="profile-name">李同学</div>
+                    <div class="profile-id">外国语学院 • 大二</div>
+                    <div class="profile-bio">热爱语言学习和文化交流，分享校园生活日常，摄影爱好者</div>
+                    <div class="profile-tags">
+                        <span class="tag">#英语学习</span>
+                        <span class="tag">#法语入门</span>
+                        <span class="tag">#校园摄影</span>
+                        <span class="tag">#读书会</span>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">78</div>
+                            <div class="stat-label">动态</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">142</div>
+                            <div class="stat-label">关注</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">356</div>
+                            <div class="stat-label">粉丝</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1.8K</div>
+                            <div class="stat-label">获赞</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <button class="btn btn-outline" id="message-btn">发消息</button>
+                    <button class="btn btn-primary" id="follow-btn">已关注</button>
+                </div>
+            </div>
+
+            <div class="profile-tabs">
+                <div class="profile-tab active">动态</div>
+                <div class="profile-tab">相册</div>
+                <div class="profile-tab">收藏</div>
+                <div class="profile-tab">关注</div>
+                <div class="profile-tab">粉丝</div>
+            </div>
+
+            <div class="feed-container">
+                <div class="feed-left">
+                    <div class="tab-content" id="tab-dynamic">
+                        <div class="dynamic-card">
+                            <div class="dynamic-header">
+                                <div class="user-avatar">李</div>
+                                <div class="user-info">
+                                    <div class="username">李同学</div>
+                                    <div class="timestamp">今天 09:15</div>
+                                </div>
+                            </div>
+                            <div class="dynamic-content">
+                                <div class="dynamic-text">
+                                    早上的法语课学到了很多有趣的表达，给大家分享一句：La vie est une fleur dont l'amour est le miel.
+                                    <span class="hashtag">#法语学习 #语言学习 #校园生活</span>
+                                </div>
+                                <div class="dynamic-image">
+                                    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='480' viewBox='0 0 640 480'%3E%3Crect fill='%23C7CEEA' width='640' height='480'/%3E%3Ctext fill='%23424275' font-family='Arial' font-size='30' x='280' y='240'%3E法语课堂%3C/text%3E%3C/svg%3E"
+                                        alt="法语课堂">
+                                </div>
+                            </div>
+                            <div class="dynamic-actions">
+                                <div class="action-btn like-btn">
+                                    <span>👍</span>
+                                    <span class="count">42</span>
+                                </div>
+                                <div class="action-btn">
+                                    <span>💬</span>
+                                    <span class="count">8</span>
+                                </div>
+                                <div class="action-btn">
+                                    <span>↗️</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dynamic-card">
+                            <div class="dynamic-header">
+                                <div class="user-avatar">李</div>
+                                <div class="user-info">
+                                    <div class="username">李同学</div>
+                                    <div class="timestamp">昨天 18:45</div>
+                                </div>
+                            </div>
+                            <div class="dynamic-content">
+                                <div class="dynamic-text">
+                                    参与组织了学校文化节的法语角活动，来参加的同学比预期多了一倍！很开心看到大家对学习外语的热情~
+                                    <span class="hashtag">#法语角 #校园活动 #文化节</span>
+                                </div>
+                                <div class="dynamic-image">
+                                    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='480' viewBox='0 0 640 480'%3E%3Crect fill='%23FFDAC1' width='640' height='480'/%3E%3Ctext fill='%23B36700' font-family='Arial' font-size='30' x='280' y='240'%3E法语角活动%3C/text%3E%3C/svg%3E"
+                                        alt="法语角活动">
+                                </div>
+                            </div>
+                            <div class="dynamic-actions">
+                                <div class="action-btn like-btn liked">
+                                    <span>👍</span>
+                                    <span class="count">89</span>
+                                </div>
+                                <div class="action-btn">
+                                    <span>💬</span>
+                                    <span class="count">23</span>
+                                </div>
+                                <div class="action-btn">
+                                    <span>↗️</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="tab-album" style="display:none;"></div>
+                    <div class="tab-content" id="tab-fav" style="display:none;"></div>
+                    <div class="tab-content" id="tab-following" style="display:none;"></div>
+                    <div class="tab-content" id="tab-fans" style="display:none;"></div>
+                </div>
+
+                <div class="feed-right">
+                    <div class="sidebar-card">
+                        <div class="sidebar-title">🏆 TA的成就</div>
+                        <div class="achievements">
+                            <div class="achievement">
+                                <div class="achievement-icon">📸</div>
+                                <div class="achievement-info">
+                                    <div class="achievement-title">摄影达人</div>
+                                    <div class="achievement-description">上传超过30张优质照片</div>
+                                </div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-icon">📚</div>
+                                <div class="achievement-info">
+                                    <div class="achievement-title">学习标兵</div>
+                                    <div class="achievement-description">完成连续30天学习打卡</div>
+                                </div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-icon">🌟</div>
+                                <div class="achievement-info">
+                                    <div class="achievement-title">热门作者</div>
+                                    <div class="achievement-description">拥有10条热度超过200的动态</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <div class="sidebar-title">👥 共同好友</div>
+                        <div class="common-friends">
+                            <div class="friend">
+                                <div class="user-avatar">王</div>
+                                <div class="friend-name">王学长</div>
+                            </div>
+                            <div class="friend">
+                                <div class="user-avatar">张</div>
+                                <div class="friend-name">张同学</div>
+                            </div>
+                            <div class="friend">
+                                <div class="user-avatar">刘</div>
+                                <div class="friend-name">刘同学</div>
+                            </div>
+                            <a href="#" class="show-all">查看全部12位共同好友 &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- 页脚内容同首页 -->
+            </div>
+            <div class="footer-bottom">
+                © 2025 荔枝校园社交平台 | 让每一位校园人的生活更精彩
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

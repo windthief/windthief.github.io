@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 荔枝校园</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">♥</div>
+                    <div class="logo-text">荔枝校园</div>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="#">热点</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">小组</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="搜索用户、话题..." class="search-input">
+                    </div>
+                    <button class="btn btn-icon" id="theme-toggle">🌙</button>
+                    <a href="login.html" class="btn btn-outline">登录</a>
+                    <a href="register.html" class="btn btn-primary">注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <h1 class="page-title">📋 校园新鲜事</h1>
+            <!-- 跑马灯最新通知 -->
+            <div class="marquee">
+                <div class="marquee-content">
+                    🎉 新功能上线！现在可以设置动态可见范围了 ● 校园摄影大赛报名开始，奖品丰厚 ● 计算机学院明日举办AI前沿讲座 ● 图书馆顶楼自习区现已开放
+                </div>
+            </div>
+            <div class="feed-controls">
+                <div class="feed-tabs">
+                    <div class="feed-tab active">全部动态</div>
+                    <div class="feed-tab">热点推荐</div>
+                    <div class="feed-tab">好友动态</div>
+                    <div class="feed-tab">话题精选</div>
+                </div>
+
+                <a href="post.html" class="btn btn-primary" style="margin-left: auto;">
+                    <span>✏️ 发布动态</span>
+                </a>
+            </div>
+
+            <div class="feed-container">
+                <div class="feed-left" id="feed-left">
+                    <!-- 动态内容将由js渲染插入 -->
+                </div>
+
+                <div class="feed-right">
+                    <div class="sidebar-card user-info-card">
+                        <div class="sidebar-title">👤 我的信息</div>
+                        <div class="user-card">
+                            <div class="user-avatar-large">访</div>
+                            <h3 class="user-name">游客用户</h3>
+                            <p class="user-status">点击登录获取完整体验</p>
+                            <a href="login.html" class="btn btn-primary"
+                                style="width: 100%; margin-top: 15px;">登录/注册</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card hot-topic-card">
+                        <div class="sidebar-title">🔥 热点话题</div>
+                        <ul class="trending-list">
+                            <li class="trending-item">
+                                <div class="trending-content">#校园春景摄影大赛</div>
+                                <div class="trending-stats">
+                                    <span>🔥 热门</span>
+                                    <span>💬 1568</span>
+                                </div>
+                            </li>
+                            <li class="trending-item">
+                                <div class="trending-content">#计算机学院课程设计互助</div>
+                                <div class="trending-stats">
+                                    <span>📚 学习</span>
+                                    <span>💬 892</span>
+                                </div>
+                            </li>
+                            <li class="trending-item">
+                                <div class="trending-content">学校食堂新品试吃体验！</div>
+                                <div class="trending-stats">
+                                    <span>😋 美食</span>
+                                    <span>👍 623</span>
+                                </div>
+                            </li>
+                            <li class="trending-item">
+                                <div class="trending-content">校篮球队成功晋级全国大学生篮球联赛区域决赛</div>
+                                <div class="trending-stats">
+                                    <span>🏀 体育</span>
+                                    <span>↗️ 412</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- B站风格操作工具栏 -->
+    <div class="b-toolbar">
+        <div class="tool-button" id="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+            <span>返回顶部</span>
+        </div>
+        <div class="tool-button" id="refresh">
+            <i class="fas fa-redo"></i>
+            <span>刷新内容</span>
+        </div>
+        <div class="tool-button" id="feedback">
+            <i class="fas fa-comment-alt"></i>
+            <span>新版反馈</span>
+        </div>
+        <div class="tool-button" id="customer-service">
+            <i class="fas fa-headset"></i>
+            <span>联系客服</span>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">刷新成功！内容已更新</div>
+
+    <div class="feedback-form" id="feedbackForm">
+        <h3>新版反馈</h3>
+        <p>请告诉我们您遇到的问题或改进建议：</p>
+        <textarea placeholder="请输入您的反馈内容..."></textarea>
+        <button>提交反馈</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column dropdown">
+                    <h3>关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">团队介绍</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column dropdown">
+                    <h3>使用帮助</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column dropdown">
+                    <h3>校园服务</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">学术活动</a></li>
+                        <li><a href="#">社团组织</a></li>
+                        <li><a href="#">就业指导</a></li>
+                        <li><a href="#">校园资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column dropdown">
+                    <h3>关注我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">官方微信</a></li>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">小红书</a></li>
+                        <li><a href="#">Bilibili</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025 荔枝校园社交平台 | 让每一位校园人的生活更精彩
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/dynamic_data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

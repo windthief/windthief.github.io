@@ -1,0 +1,704 @@
+/* css/profile.css - 个人主页和他人主页专用样式 */
+
+/* 个人主页头部样式 */
+.profile-header {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 30px;
+    background: linear-gradient(45deg, #ffccd5, #ffb8d9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.profile-id {
+    color: #9e9e9e;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.profile-bio {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.profile-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: rgba(230, 0, 76, 0.1);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+}
+
+.profile-stats {
+    display: flex;
+    margin-top: 20px;
+}
+
+.stat-item {
+    margin-right: 30px;
+    text-align: center;
+    min-width: 60px;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #9e9e9e;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+/* 个人主页选项卡样式 */
+.profile-tabs {
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-tab {
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.profile-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 用户卡片组件 */
+.user-card {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.user-avatar-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ffb8d9, #ffccd5);
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.user-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.user-status {
+    font-size: 14px;
+    color: #9e9e9e;
+}
+
+/* 活动日历 */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.calendar-day {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.calendar-day.other-month {
+    color: #ccc;
+}
+
+.calendar-day.event {
+    background-color: rgba(230, 0, 76, 0.1);
+    color: var(--primary-color);
+}
+
+.calendar-day.current {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 活动日历样式 */
+.calendar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.calendar-list li {
+    padding: 7px 0 7px 0;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 15px;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+.calendar-list li:last-child {
+    border-bottom: none;
+}
+.calendar-date {
+    display: inline-block;
+    background: #ffe4ef;
+    color: #e6004c;
+    border-radius: 10px;
+    font-size: 13px;
+    padding: 2px 10px;
+    margin-right: 12px;
+    min-width: 68px;
+    text-align: center;
+}
+
+/* 成就样式 */
+.achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(230, 0, 76, 0.05);
+}
+
+.achievement-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgba(230, 0, 76, 0.1);
+    color: var(--primary-color);
+}
+
+.achievement-title {
+    font-weight: 600;
+}
+
+.achievement-description {
+    font-size: 14px;
+    color: #9e9e9e;
+}
+
+/* 共同好友部分 */
+.common-friends {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.friend {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.friend:last-child {
+    border-bottom: none;
+}
+
+.friend-name {
+    font-weight: 500;
+}
+
+.show-all {
+    text-align: right;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* 编辑资料按钮样式 */
+.edit-profile-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #9e9e9e;
+    cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+    color: var(--primary-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 900px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-avatar {
+        margin: 0 auto 20px;
+    }
+
+    .profile-stats {
+        justify-content: center;
+    }
+
+    .profile-actions {
+        position: static;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .edit-profile-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-tabs {
+        flex-wrap: wrap;
+        border-radius: 12px;
+    }
+
+    .profile-tab {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+
+    .profile-stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        min-width: 25%;
+        margin-bottom: 10px;
+    }
+}
+
+/* 编辑资料模态框样式 */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  min-width: 340px;
+  max-width: 90vw;
+  padding: 0;
+  display: none;
+}
+.modal-content {
+  padding: 32px 24px 24px 24px;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+}
+.modal-mask {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1000;
+  display: none;
+}
+#edit-profile-form .form-group {
+  margin-bottom: 18px;
+}
+#edit-profile-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+#edit-profile-form input,
+#edit-profile-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  resize: none;
+}
+#edit-profile-form button {
+  font-size: 16px;
+}
+
+/* 编辑资料弹窗头像上传样式 */
+#edit-avatar-preview {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #FFCCD5;
+  color: #e6004c;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px auto;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(230,0,76,0.10);
+}
+#edit-profile-form select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  background: #fff;
+}
+#choose-avatar-btn {
+  margin-top: 6px;
+  font-size: 14px;
+  padding: 5px 18px;
+}
+
+/* 动态卡片样式 */
+.dynamic-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 20px 22px 16px 22px;
+  margin-bottom: 24px;
+  transition: box-shadow 0.2s;
+}
+.dynamic-card:hover {
+  box-shadow: 0 4px 24px rgba(230,0,76,0.10);
+}
+.dynamic-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFCCD5;
+  color: #e6004c;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+.user-info .username {
+  font-weight: 600;
+  font-size: 17px;
+}
+.user-info .timestamp {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 2px;
+}
+.dynamic-content {
+  margin-bottom: 10px;
+}
+.dynamic-text {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+}
+.hashtag {
+  display: inline-block;
+  background: #ffe4ef;
+  color: #e6004c;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 13px;
+  margin-left: 8px;
+}
+.dynamic-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.dynamic-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 6px;
+}
+.action-btn {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-size: 15px;
+  cursor: pointer;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.action-btn.like-btn.liked, .action-btn.like-btn:hover {
+  color: #e6004c;
+}
+.action-btn .like-icon {
+  font-size: 17px;
+}
+
+/* 相册tab样式 */
+.album-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+}
+.album-list img {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 2px solid #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.album-list img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(230,0,76,0.13);
+}
+
+/* 收藏tab样式 */
+.fav-list {
+  margin-top: 18px;
+}
+.fav-item {
+  background: #f8f8fa;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #444;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+/* 关注/粉丝tab样式 */
+.following-list, .fans-list {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.following-item, .fans-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  padding: 12px 22px;
+  font-size: 15px;
+  color: #e6004c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.following-item:hover, .fans-item:hover {
+  background: #ffe4ef;
+  box-shadow: 0 2px 12px rgba(230,0,76,0.10);
+}
+
+/* 关注/粉丝用户卡片样式 */
+.usercard-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 18px;
+}
+.usercard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(230,0,76,0.07);
+  display: flex;
+  align-items: center;
+  padding: 18px 28px 18px 18px;
+  min-width: 260px;
+  max-width: 340px;
+  gap: 16px;
+  transition: box-shadow 0.2s, background 0.2s;
+  position: relative;
+}
+.usercard:hover {
+  background: #ffe4ef;
+  box-shadow: 0 4px 24px rgba(230,0,76,0.13);
+}
+.usercard-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFCCD5;
+  color: #e6004c;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 6px rgba(230,0,76,0.08);
+}
+.usercard-info {
+  flex: 1;
+  min-width: 0;
+}
+.usercard-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e6004c;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.usercard-college {
+  font-size: 13px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.usercard-btn {
+  background: #e6004c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 14px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.usercard-btn-outline {
+  background: #fff;
+  color: #e6004c;
+  border: 1px solid #e6004c;
+}
+.usercard-btn:hover {
+  background: #b80038;
+  color: #fff;
+}
+.usercard-btn-outline:hover {
+  background: #ffe4ef;
+  color: #e6004c;
+}
+
+/* 编辑资料弹窗结构优化样式 */
+.edit-profile-avatar-block {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.edit-profile-avatar-block #edit-avatar-preview {
+  margin: 0 auto 8px auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #FFCCD5;
+  color: #e6004c;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(230,0,76,0.10);
+}
+.edit-profile-avatar-block #choose-avatar-btn {
+  margin-top: 8px;
+  font-size: 14px;
+  padding: 5px 18px;
+}
+.edit-profile-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+  margin-bottom: 0;
+}
+.edit-profile-fields .form-group {
+  flex: 1 1 48%;
+  min-width: 160px;
+  margin-bottom: 16px;
+}
+.edit-profile-fields .form-group:last-child {
+  flex-basis: 100%;
+}
+@media (max-width: 600px) {
+  .edit-profile-fields {
+    flex-direction: column;
+    gap: 0;
+  }
+  .edit-profile-fields .form-group {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+}

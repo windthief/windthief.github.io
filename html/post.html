@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布动态 - 荔枝校园</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/post.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">♥</div>
+                    <div class="logo-text">荔枝校园</div>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="#">热点</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">小组</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="搜索用户、话题..." class="search-input">
+                    </div>
+                    <button class="btn btn-outline" id="notification-btn">🔔</button>
+                    <div class="user-menu">
+                        <div class="user-avatar">张</div>
+                        <span class="username">张同学</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <h1 class="page-title">✏️ 发布动态</h1>
+
+            <div class="post-editor">
+                <div class="user-avatar">张</div>
+
+                <div class="editor-main">
+                    <textarea id="post-content" class="post-content" placeholder="分享你的校园生活..."></textarea>
+
+                    <div class="editor-tools">
+                        <div class="tool-group">
+                            <button type="button" class="tool-btn" id="add-image">
+                                <span>🖼️</span> 图片
+                            </button>
+                            <button type="button" class="tool-btn" id="add-topic">
+                                <span>🏷️</span> 话题
+                            </button>
+                            <button type="button" class="tool-btn" id="add-location">
+                                <span>📍</span> 地点
+                            </button>
+                        </div>
+
+                        <div class="tool-group">
+                            <div class="visibility-selector">
+                                <label for="post-visibility">谁可以看:</label>
+                                <select id="post-visibility" class="form-control">
+                                    <option value="public">公开</option>
+                                    <option value="friends">仅好友</option>
+                                    <option value="private">仅自己</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" id="publish-btn">发布</button>
+                        </div>
+                    </div>
+
+                    <div class="preview-area hidden" id="image-preview">
+                        <div class="preview-title">图片预览</div>
+                        <div class="preview-images"></div>
+                        <input type="file" id="image-upload" multiple accept="image/*" class="hidden">
+                    </div>
+
+                    <div class="topic-tags" id="topic-tags">
+                        <input type="text" id="add-topic-input" class="tag-input" placeholder="添加话题标签(按回车确认)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- 页脚内容同首页 -->
+            </div>
+            <div class="footer-bottom">
+                © 2025 荔枝校园社交平台 | 让每一位校园人的生活更精彩
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/post.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 荔枝校园</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">♥</div>
+                    <div class="logo-text">荔枝校园</div>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="#">热点</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">小组</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="login.html" class="btn btn-outline">登录</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content auth-container">
+        <div class="container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <div class="auth-logo">♥</div>
+                    <h1 class="auth-title">创建新账号</h1>
+                </div>
+
+                <div class="auth-body">
+                    <form id="register-form">
+                        <!-- 头像选择区域 -->
+                        <div class="form-group text-center">
+                            <div class="avatar-preview mb-3">
+                                <div class="user-avatar-large" id="avatar-preview">头像</div>
+                            </div>
+                            <button type="button" class="btn btn-outline" id="choose-avatar">
+                                <span>🖼️</span> 选择头像
+                            </button>
+                            <input type="file" id="avatar-upload" accept="image/*" class="hidden">
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-student-id" class="form-label">学号</label>
+                            <input type="text" id="reg-student-id" class="form-control" placeholder="请输入你的学号" required>
+                            <div class="form-hint">仅支持在校学生学号注册</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-name" class="form-label">姓名</label>
+                            <input type="text" id="reg-name" class="form-control" placeholder="请输入真实姓名" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-password" class="form-label">设置密码</label>
+                            <div class="password-input">
+                                <input type="password" id="reg-password" class="form-control" placeholder="设置6位以上密码"
+                                    required>
+                                <span class="toggle-password">👁️</span>
+                            </div>
+                            <div class="password-strength">
+                                <div class="strength-bar"></div>
+                                <div class="strength-text">密码强度: 弱</div>
+                            </div>
+                        </div>
+                        <!-- 个人简介字段 -->
+                        <div class="form-group">
+                            <label for="bio" class="form-label">个人简介</label>
+                            <textarea id="bio" class="form-control" placeholder="介绍一下你自己...(最多200字)"
+                                maxlength="200"></textarea>
+                            <div class="bio-counter">0/200</div>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-confirm-password" class="form-label">确认密码</label>
+                            <div class="password-input">
+                                <input type="password" id="reg-confirm-password" class="form-control"
+                                    placeholder="请再次输入密码" required>
+                                <span class="toggle-password">👁️</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nickname" class="form-label">昵称</label>
+                            <input type="text" id="nickname" class="form-control" placeholder="设置你的昵称">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="college" class="form-label">学院</label>
+                            <select id="college" class="form-control" required>
+                                <option value="">选择你的学院</option>
+                                <option value="computer">计算机学院</option>
+                                <option value="business">经济管理学院</option>
+                                <option value="english">外国语学院</option>
+                                <option value="art">艺术学院</option>
+                                <option value="law">法学院</option>
+                                <option value="science">理学院</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" id="agree-terms" required>
+                            <label for="agree-terms">我已阅读并同意<a href="#">《用户协议》</a>和<a href="#">《隐私政策》</a></label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; margin-top: 20px;">注册账号</button>
+                    </form>
+
+                    <div class="auth-switch">
+                        <span id="switch-text">已有账号？</span>
+                        <a href="#" id="switch-link">立即登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- 页脚内容同首页 -->
+            </div>
+            <div class="footer-bottom">
+                © 2025 荔枝校园社交平台 | 让每一位校园人的生活更精彩
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>

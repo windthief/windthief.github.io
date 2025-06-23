@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态详情 - 荔枝校园</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dynamic_detail.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">♥</div>
+                    <div class="logo-text">荔枝校园</div>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="#">热点</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">小组</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="搜索用户、话题..." class="search-input">
+                    </div>
+                    <button class="btn btn-outline" id="notification-btn">🔔</button>
+                    <div class="user-menu">
+                        <div class="user-avatar">张</div>
+                        <span class="username">张同学</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="dynamic-detail-container">
+                <!-- 返回按钮 -->
+                <a href="index.html" class="back-link">
+                    <span>&larr;</span> 返回动态列表
+                </a>
+
+                <!-- 动态详情 -->
+                <div class="dynamic-detail-card">
+                    <div class="dynamic-header">
+                        <div class="user-avatar">李</div>
+                        <div class="user-info">
+                            <div class="username">李同学</div>
+                            <div class="timestamp">外国语学院 • 昨天 15:32</div>
+                        </div>
+                        <button class="btn btn-outline btn-small">关注</button>
+                    </div>
+
+                    <div class="dynamic-content">
+                        <div class="dynamic-text">
+                            发现了一个超美的自习地点！学校新建的图书馆顶楼，俯瞰整个校园，学习氛围也超好，推荐给大家！📚
+                            <div class="hashtag">#自习地点 #图书馆 #学习环境</div>
+                        </div>
+
+                        <div class="dynamic-image">
+                            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='480' viewBox='0 0 640 480'%3E%3Crect fill='%23B5EAD7' width='640' height='480'/%3E%3Ctext fill='%2300713E' font-family='Arial' font-size='30' x='280' y='240'%3E图书馆风景%3C/text%3E%3C/svg%3E"
+                                alt="图书馆风景">
+                        </div>
+
+                        <div class="dynamic-stats">
+                            <div class="stat-item">
+                                <span>🔥</span> 156次浏览
+                            </div>
+                            <div class="stat-item">
+                                <span>📍</span> 校园图书馆
+                            </div>
+                        </div>
+
+                        <div class="dynamic-actions">
+                            <button class="action-btn like-btn liked">
+                                <span>👍</span>
+                                <span class="count">156</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>↗️</span> 转发
+                            </button>
+                            <button class="action-btn">
+                                <span>⭐</span> 收藏
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评论区 -->
+                <div class="comment-section">
+                    <h2 class="section-title">评论 (24)</h2>
+
+                    <div class="comment-editor">
+                        <div class="user-avatar">张</div>
+                        <div class="comment-input-container">
+                            <input type="text" class="comment-input" placeholder="写下你的评论...">
+                            <button class="btn btn-primary btn-small">评论</button>
+                        </div>
+                    </div>
+
+                    <div class="comments-list">
+                        <!-- 评论1 -->
+                        <div class="comment-item">
+                            <div class="user-avatar">王</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <div class="username">王学长</div>
+                                    <div class="timestamp">3小时前</div>
+                                </div>
+                                <div class="comment-text">
+                                    真的不错！我之前只在2楼自习，没想到顶楼风景这么好👍
+                                </div>
+                                <div class="comment-actions">
+                                    <button class="btn-link">👍 12</button>
+                                    <button class="btn-link">回复</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 评论2 -->
+                        <div class="comment-item">
+                            <div class="user-avatar">刘</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <div class="username">刘同学</div>
+                                    <div class="timestamp">5小时前</div>
+                                </div>
+                                <div class="comment-text">
+                                    开放时间是什么时候啊？晚上几点关门？
+                                </div>
+                                <div class="comment-actions">
+                                    <button class="btn-link">👍 7</button>
+                                    <button class="btn-link">回复</button>
+                                </div>
+
+                                <!-- 回复1 -->
+                                <div class="comment-reply">
+                                    <div class="comment-item">
+                                        <div class="user-avatar">李</div>
+                                        <div class="comment-content">
+                                            <div class="comment-header">
+                                                <div class="username">李同学</div>
+                                                <div class="timestamp">4小时前</div>
+                                            </div>
+                                            <div class="comment-text">
+                                                @刘同学 早上8点到晚上10点，周末也开放
+                                            </div>
+                                            <div class="comment-actions">
+                                                <button class="btn-link">👍 4</button>
+                                                <button class="btn-link">回复</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 评论3 -->
+                        <div class="comment-item">
+                            <div class="user-avatar">张</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <div class="username">张老师</div>
+                                    <div class="timestamp">7小时前</div>
+                                </div>
+                                <div class="comment-text">
+                                    感谢分享！学校最近投入很多资源改善学习环境，希望大家好好学习~
+                                </div>
+                                <div class="comment-actions">
+                                    <button class="btn-link">👍 21</button>
+                                    <button class="btn-link">回复</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- 页脚内容同首页 -->
+            </div>
+            <div class="footer-bottom">
+                © 2025 荔枝校园社交平台 | 让每一位校园人的生活更精彩
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/dynamic_data.js"></script>
+    <script src="../js/dynamic_detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理 - 荔枝校园</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <style>
+        /* 页面美化增强 */
+        .admin-card {
+            background: var(--card-color);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(230,0,76,0.08);
+            padding: 32px 28px 28px 28px;
+            margin-top: 32px;
+        }
+        .admin-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .search-input {
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            outline: none;
+            min-width: 220px;
+            font-size: 15px;
+            transition: border 0.2s;
+        }
+        .search-input:focus {
+            border: 1.5px solid var(--primary-color);
+        }
+        .user-table-container {
+            overflow-x: auto;
+        }
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(230,0,76,0.04);
+        }
+        .user-table th, .user-table td {
+            padding: 14px 10px;
+            text-align: center;
+        }
+        .user-table th {
+            background: var(--primary-color);
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .user-table td:last-child, .user-table th:last-child {
+            min-width: 260px;
+            width: 260px;
+        }
+        .user-table .action-btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn.btn-small {
+            min-width: 70px;
+            margin: 2px 0;
+        }
+        .user-table tbody tr:nth-child(even) {
+            background: #faf6fa;
+        }
+        .user-table tbody tr:hover {
+            background: #fff0f6;
+        }
+        @media (max-width: 600px) {
+            .admin-card { padding: 12px 4px; }
+            .user-table td:last-child, .user-table th:last-child {
+                min-width: 180px;
+                width: 180px;
+            }
+            .btn.btn-small { min-width: 50px; font-size: 12px; }
+            .search-input { min-width: 120px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍒</span>
+                    <span class="logo-text">荔枝校园</span>
+                </a>
+                <nav style="margin-left: 30px;">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="admin.html" class="active">用户管理</a></li>
+                        <li><a href="dynamic_admin.html">动态管理</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="admin-card">
+                <h1 class="page-title">👮‍♂️ 用户管理</h1>
+
+                <div class="admin-controls">
+                    <div class="search-container">
+                        <input type="text" placeholder="搜索学号/姓名/昵称..." class="search-input">
+                        <button class="btn btn-primary">搜索</button>
+                    </div>
+                    <button class="btn btn-secondary" id="refresh-users">刷新</button>
+                </div>
+
+                <div class="user-table-container">
+                    <table class="user-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>学号</th>
+                                <th>姓名</th>
+                                <th>昵称</th>
+                                <th>学院</th>
+                                <th>注册时间</th>
+                                <th>状态</th>
+                                <th>禁言状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-table-body">
+                            <!-- 用户数据由JS填充 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>
